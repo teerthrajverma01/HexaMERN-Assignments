@@ -1,0 +1,64 @@
+Note:   Create a database :    ShoppingCartDb
+
+1.   Create the following tables: 
+
+ 		a. Create a table :   Products
+				Columns and Constraints: 
+						ProductId ---  Primary Key,
+						Name   --   Not Null, 
+						QuantityInStock ----   Not Null
+						UnitPrice,   ----  Not null, Greater than Zero
+						Category    ---  Not null
+		
+	b.  Create a table :   Users
+				Columns :  UserId , UserName, Password, ContactNumber, Address
+				
+				Hint :   No need to change Users table 		
+				
+	c.  Create a table :  Cart
+				Columns and  Constraints:  
+						CartId	---		Primary Key,  											
+						ProductId  ---   Foreign Key with Products(ProductId), 
+						Quantity   ---    Not Null,  Greater than Zero
+						UserId   ---  Not Null 
+				
+	
+				
+		d.   Create a table :  Orders
+			Columns and  Constraints:  
+				
+					OrderId  ---  Primary Key,  
+					CartId ---    Not Null
+					OrderDate  ---  Date   
+					UserId   ---  Foreign Key with Users(UserId)
+	
+
+
+2.  Insert 5  records in each table. 
+	 
+	a.  Try to insert valid and invalid records in the above tables. 
+	b.  Try to verify with delete cascade and without delete cascade. 
+	c.  Verify that all constrains are working properly. 
+
+3.  Write the select queries on the above tables for the following requirements:
+
+	 i.  On Product Table  
+			a.   Display all Products
+			b.   Display Products belongs to particular Category
+			c.   Display out of stock products (means quantity is zero)
+			d.  Display the products which price between 1000 to 10000 
+			e.  Display the product details based on the ProductId
+	
+	ii.   On Cart Table:
+			a.  Display data based on the given CartId
+			b.  Check is there any products added in Cart based on the ProductId
+		
+
+	iii.  On Orders table
+			
+		a.  Display OrderDetails based on OrderId
+		b.  Display OrderDetails based on UserId
+		b.  Display OrderDetails based on OrderDate
+
+ 
+		 
