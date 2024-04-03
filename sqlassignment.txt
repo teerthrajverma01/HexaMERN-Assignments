@@ -1,0 +1,31 @@
+FOREIGN KEY USAGE Example
+syntax: FOREIGN KEY {colname} REFERENCES TABLENAME({columnname});
+
+CREATE TABLE Dept(
+	deptno  INT,
+    dname   VARCHAR(100),
+    loc    VARCHAR(100)
+);
+
+CREATE TABLE Emps
+(
+	empno INT PRIMARY KEY,
+	ename VARCHAR(100),
+	job   VARCHAR(100),
+	salary   INT,
+	deptno INT
+	FOREIGN KEY (deptno) REFERENCES Emps(deptno)
+
+);
+
+
+
+
+
+What is Foreign Key ?
+A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+
+Why use Foreign Key?
+To avoid inconsistent data from being entered (data integrity and data consistency)
+This is achieved by maintaining the relationships between tables, preventing actions that would destroy these links.
