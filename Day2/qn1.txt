@@ -1,0 +1,20 @@
+
+What is viws in mysql?
+In MySQL, a view is a virtual table that is based on the result of a SELECT query. It does not store data on its own but instead retrieves data from the underlying tables each time the view is referenced. Views can be queried like regular tables, and they provide a convenient way to encapsulate complex queries and present them as a single virtual table.
+
+How can we create views
+We can create a new view by using the CREATE VIEW and SELECT statement. SELECT statements are used to take data from the source table to make a VIEW.
+eg: 
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+Once a view is created, you can query it like a regular table
+SELECT * FROM my_view;
+
+
+WHy use views?
+ Views can be used to restrict access to certain columns or rows of a table. 
+Views promote code reusability by encapsulating frequently used queries.
+Views provide a layer of abstraction over the underlying tables. 

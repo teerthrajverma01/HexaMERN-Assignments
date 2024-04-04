@@ -1,0 +1,11 @@
+
+6.  How to use distinct option in select query? 
+
+The DISTINCT keyword in SQL is used in a SELECT query to eliminate duplicate rows from the result set.
+
+When you use DISTINCT, the database system will return only unique values for the specified columns or expressions.
+
+
+syntax
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
