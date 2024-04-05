@@ -1,0 +1,71 @@
+a.   Find some more details about callbacks
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+The consumer of a callback-based API writes a function that is passed into the API. The provider of the API (called the caller) takes the function and calls back (or executes) the function at some point inside the caller's body. The caller is responsible for passing the right parameters into the callback function. The caller may also expect a particular return value from the callback function, which is used to instruct further behavior of the caller. 
+
+There are two ways in which the callback may be called: synchronous and asynchronous. Synchronous callbacks are called immediately after the invocation of the outer function, with no intervening asynchronous tasks, while asynchronous callbacks are called at some point later, after an asynchronous operation has completed.
+
+Examples of synchronous callbacks include the callbacks passed to Array.prototype.map(), Array.prototype.forEach(), etc. Examples of asynchronous callbacks include the callbacks passed to setTimeout() and Promise.prototype.then().
+
+
+b: Check the following methods in javascript where callbacks are involved:
+a.  map()
+b.  findIndex()
+c.   find()
+d. filter() 
+
+The map() method creates a new array by calling a provided callback function on every element in the original array.
+Syntax: array.map(callback(currentValue[, index[, array]]) { // return element for newArray })
+
+The findIndex() method returns the index of the first element in the array that satisfies the provided callback function.
+Syntax: array.findIndex(callback(element[, index[, array]]) { // return true or false })
+
+The find() method returns the first element in the array that satisfies the provided callback function.
+Syntax: array.find(callback(element[, index[, array]]) { // return true or false })
+
+The filter() method creates a new array with all elements that pass the test implemented by the provided callback function.
+Syntax: array.filter(callback(element[, index[, array]]) { // return true or false })
+
+
+c: What kind of applications we can create using node js?
+Web Servers and APIs
+Real-Time Applications
+Single-Page Applications (SPAs)
+Microservices Architecture
+Command-Line Tools and Utilities
+Desktop Applications
+Internet of Things (IoT) Applications
+Real-Time Analytics and Dashboards
+
+
+d.   Find out more details  about "Event Loops" in node js 
+
+The event loop is what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by offloading operations to the system kernel whenever possible.
+
+   ┌───────────────────────────┐
+┌─>│           timers                  │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │     pending callbacks             │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │       idle, prepare               │
+│  └─────────────┬─────────────┘       ┌───────────────┐
+│  ┌─────────────┴─────────────┐       │   incoming:        │
+│  │           poll                    │<─────┤  connections,     │
+│  └─────────────┬─────────────┘       │   data, etc.       │
+│  ┌─────────────┴─────────────┐       └───────────────┘
+│  │           check                   │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+└──┤      close callbacks             │
+   └───────────────────────────┘
+
+timers: this phase executes callbacks scheduled by setTimeout() and setInterval().
+pending callbacks: executes I/O callbacks deferred to the next loop iteration.
+idle, prepare: only used internally.
+poll: retrieve new I/O events; execute I/O related callbacks (almost all with the exception of close callbacks, the ones scheduled by timers, and setImmediate());
+	 node will block here when appropriate.
+check: setImmediate() callbacks are invoked here.
+close callbacks: some close callbacks, e.g. socket.on('close', ...).

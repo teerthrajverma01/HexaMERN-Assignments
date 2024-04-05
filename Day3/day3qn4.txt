@@ -1,0 +1,25 @@
+
+4.  What are differences between MySql and MongoDb?
+
+MySQL is a relational database management system (RDBMS), while MongoDB is a NoSQL database management system
+
+data model >>
+MySQL: Follows a relational data model based on tables with rows and columns. Data is structured into predefined schemas with relationships between tables.
+MongoDB: Follows a document-oriented data model. Data is stored in flexible, JSON-like documents, and collections of documents. There are no predefined schemas, allowing for more dynamic and flexible data storage.
+
+
+Schema >>
+MySQL: Requires a predefined schema, where tables must adhere to a fixed structure defined by columns, data types, and relationships.
+MongoDB: Has a dynamic schema, allowing documents within a collection to have varying structures. Fields can vary from document to document, and there are no strict requirements for data types.
+
+Query Language >>
+MySQL: Uses SQL (Structured Query Language) for querying and manipulating data. SQL provides a standardized way to interact with relational databases.
+MongoDB: Uses a query language similar to JSON, known as MongoDB Query Language (MQL). It includes a rich set of operators for querying and manipulating data.
+
+Scalability >>
+MySQL: Traditional relational databases like MySQL typically scale vertically, meaning they are scaled up by adding more resources (CPU, memory) to a single server.
+MongoDB: NoSQL databases like MongoDB are designed to scale horizontally, meaning they can distribute data across multiple servers to handle larger amounts of traffic and data.
+
+Transactions >>
+MySQL: Supports ACID (Atomicity, Consistency, Isolation, Durability) transactions, making it suitable for applications requiring complex transactions and data integrity.
+MongoDB: Supports transactions across multiple documents within a single collection in recent versions, but transactions involving multiple collections or databases are not supported in all deployments.
