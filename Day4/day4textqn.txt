@@ -48,16 +48,23 @@ Assertions: include boundaries, which indicate the beginnings and endings of lin
 
 
 
+3: Check the following methods in javascript where callbacks are involved:
+a.  map()
+b.  findIndex()
+c.   find()
+d. filter() 
 
+The map() method creates a new array by calling a provided callback function on every element in the original array.
+Syntax: array.map(callback(currentValue[, index[, array]]) { // return element for newArray })
 
+The findIndex() method returns the index of the first element in the array that satisfies the provided callback function.
+Syntax: array.findIndex(callback(element[, index[, array]]) { // return true or false })
 
+The find() method returns the first element in the array that satisfies the provided callback function.
+Syntax: array.find(callback(element[, index[, array]]) { // return true or false })
 
-
-
-
-
-
-
+The filter() method creates a new array with all elements that pass the test implemented by the provided callback function.
+Syntax: array.filter(callback(element[, index[, array]]) { // return true or false })
 
 
 
@@ -68,9 +75,6 @@ The Object.values() static method returns an array of a given object's own enume
 syntax: Object.values(obj)
 Parameters: obj (An object).
 Return value: An array containing the given object's own enumerable string-keyed property values.
-
-
-
 
 
 
