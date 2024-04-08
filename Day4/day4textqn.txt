@@ -1,0 +1,109 @@
+What is Regular Expression in JavaScript ?
+Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec() and test() methods of RegExp, and with the match(), matchAll(), replace(), replaceAll(), search(), and split() methods of String. 
+
+Methods
+test()
+Tests for a match in a string. It returns true or false.
+exec()
+Executes a search for a match in a string. It returns an array of information or null on a mismatch.
+match()	Returns an array containing all of the matches, including capturing groups, or null if no match is found.
+matchAll()	Returns an iterator containing all of the matches, including capturing groups.
+search()	Tests for a match in a string. It returns the index of the match, or -1 if the search fails.
+replace()	Executes a search for a match in a string, and replaces the matched substring with a replacement substring.
+replaceAll()	Executes a search for all matches in a string, and replaces the matched substrings with a replacement substring.
+split()	Uses a regular expression or a fixed string to break a string into an array of substrings.
+
+
+
+
+
+How to use Regular Expression in Javascript?
+
+Creating a regular expression 
+syntax: /pattern/modifier(s);
+2methods:
+Using a regular expression literal, which consists of a pattern enclosed between slashes, as follows:
+	const re = /ab+c/;
+calling the constructor function of the RegExp object, 
+	const re = new RegExp("ab+c");
+
+
+SpecialCharacters in regex
+Modifiers:Modifiers define how to perform the seach
+/g, /i, /m
+
+Brackets []: are used to find a range of characters
+eg [abc], [^abc], [0-9], [^0-9], (x|y)
+
+Metacharacters: are characters with a special meaning(matches single character).
+., \w, \W, \d, \D, \s, \S, \b, \B etc.
+
+Quantifiers: Quantifiers indicate numbers of characters or expressions to match
+x*, x+, x?, x{n}, x{n,}, x{n,m}
+
+Assertions: include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
+^, $, \b, \B, x(?=y), x(?!y), (?<=y)x, (?<!y)x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a.  How to extract only values from the object?
+The Object.values() static method returns an array of a given object's own enumerable string-keyed property values.
+
+syntax: Object.values(obj)
+Parameters: obj (An object).
+Return value: An array containing the given object's own enumerable string-keyed property values.
+
+
+
+
+
+
+How to clone a object?
+
+Method1
+// Cloning the Object with Spread Operator
+let clonedObj = { ...obj };
+
+Method2
+The Object.assign() static method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
+let clonedObj = Object.assign(target)
+Object.assign(target, source1)
+Object.assign(target, source1, source2,...	)
+Note: You can only use the Object.assign() method to make a shallow copy of an object while deeper objects are referenced.
+
+
+Method3
+The JSON.stringify() static method converts a JavaScript value to a JSON string
+JSON.stringify(value)
+JSON.stringify(value, replacer, space)
+
+The JSON.parse() static method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned.
+JSON.parse(text)
+JSON.parse(text, reviver)
+
+This method can be used for deep cloning but will not be the best option because it does not work with function or symbol properties.
+
+The best option to implement deep cloning will be to use Lodash. 
+_.cloneDeep(obj)
+
+
+
+
+
+	
