@@ -1,0 +1,35 @@
+	
+/\b[A-Z][A-Z]\d{2}[A-Z]{2}\d{3}\d\b/g
+
+What are data structure? Why do we need?
+
+Data structures are fundamental concepts in computer science that allow us to organize, store, and manage data efficiently. They define the way data is arranged, accessed, and manipulated in a computer's memory. Data structures are essential because they provide various operations for efficiently storing and retrieving data, depending on the requirements of a particular problem or application.
+
+Here are some reasons why we need data structures:
+Organizing Data
+Efficient Data Access
+Memory Management
+Optimizing Operations
+Abstraction and Encapsulation
+Facilitating Code Reuse
+
+
+
+What are the applications of stack and queue in real-time applications?
+
+Stacks and queues are fundamental data structures with various real-time applications. 
+
+Applications of Stacks:
+Function Call Stack
+Expression Evaluation
+Backtracking Algorithms
+Undo Mechanisms
+Browser History
+
+Applications of Queues:
+
+Task Scheduling
+Print Queue
+Message Queues
+Breadth-First Search (BFS)
+Buffering in I/O Operations
