@@ -1,0 +1,55 @@
+What is event loop in nodejs ? study some detail about "event loop"?
+
+The event loop is what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by offloading operations to the system kernel whenever possible.
+
+
+timers: this phase executes callbacks scheduled by setTimeout() and setInterval().
+pending callbacks: executes I/O callbacks deferred to the next loop iteration.
+idle, prepare: only used internally.
+poll: retrieve new I/O events; execute I/O related callbacks (almost all with the exception of close callbacks, the ones scheduled by timers, and setImmediate());
+	 node will block here when appropriate.
+check: setImmediate() callbacks are invoked here.
+close callbacks: some close callbacks, e.g. socket.on('close', ...).
+
+//************************************************************************
+What is promises in javascript ?
+A Promise represents something that is eventually fulfilled. A Promise can either be rejected or resolved based on the operation outcome.
+A Promise is in one of these states:
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed.
+
+const myFirstPromise = new Promise((resolve, reject) => {
+// We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
+// In this example, we use setTimeout(...) to simulate async code.
+// In reality, you will probably be using something like XHR or an HTML API.
+setTimeout(() => {
+	resolve("Success!"); // Yay! Everything went well!
+	}, 250);
+});
+
+myFirstPromise.then((successMessage) => {
+// successMessage is whatever we passed in the resolve(...) function above.
+// It doesn't have to be a string, but if it is only a succeed message, it probably will be.
+	console.log(`Yay! ${successMessage}`);
+});
+
+//************************************************************************
+Why do we use promises?
+JavaScript Promise are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code.
+
+//************************************************************************
+What is significance of async and await keywords?
+The keyword async before a function makes the function return a promise
+async function myFunction() {
+  return "Hello";
+}
+Is the same as:
+function myFunction() {
+  return Promise.resolve("Hello");
+}
+
+The await keyword can only be used inside an async function.
+The await keyword makes the function pause the execution and wait for a resolved promise before it continues
+By using async and await, you can write asynchronous code that looks and behaves more like synchronous code. This makes it easier to understand and reason about, especially for developers who are more familiar with synchronous programming paradigms.
+async and await also make error handling more straightforward. You can use try...catch blocks to catch errors from asynchronous operations, just like you would with synchronous code.
