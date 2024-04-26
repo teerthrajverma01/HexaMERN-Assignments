@@ -1,0 +1,55 @@
+What are the environment variables? Why do we use in Node JS?
+Environment variables in Node.js are dynamic values that are set outside of the application code and are accessible to the application during runtime. They are typically used to configure aspects of the application's behavior or to store sensitive information such as API keys, database credentials, or configuration settings.
+
+
+How to create and access environment variables?
+
+creating environment variable in .env file
+    API_KEY=your_api_key
+    DB_PASSWORD=your_db_password
+Accessing env variable inside nodejs app 
+    const apiKey = process.env.API_KEY;
+    console.log(apiKey); // Output: 'your_api_key'
+
+
+What is the folder structure(diff. folders that we create) of Node JS application? Find some details from internet? 
+node-mysql-app/
+│
+├── config/
+│   └── database.js         # Configuration for MySQL database connection
+│
+├── models/
+│   └── user.js             # Model definition for interacting with MySQL database
+│
+├── routes/
+│   └── userRoutes.js       # Express.js routes for handling user-related endpoints
+│
+├── controllers/
+│   └── userController.js   # Controller logic for handling user-related actions
+│
+├── middleware/
+│   └── authMiddleware.js   # Middleware for authentication and authorization
+│
+├── public/
+│   ├── css/                # CSS stylesheets
+│   └── js/                 # Client-side JavaScript files
+│
+├── views/
+│   ├── index.html          # HTML file for the homepage
+│   └── userForm.html       # HTML file for user-related forms
+│
+├── app.js                  # Entry point of the Node.js application
+├── package.json            # Node.js project metadata and dependencies
+└── README.md               # Project documentation and instructions
+
+
+What is ORM? Find some examples of ORM libraries and tools?
+ORM stands for Object-Relational Mapping. It's a programming technique used to convert data between incompatible type systems, such as object-oriented programming languages and relational databases. ORM frameworks facilitate the interaction between the application's object-oriented code and the relational database, allowing developers to work with objects rather than SQL statements.
+
+Sequelize: A popular ORM for Node.js that supports multiple SQL dialects (MySQL, PostgreSQL, SQLite, etc.)
+TypeORM: A TypeScript-based ORM for Node.js
+Django ORM: Built into the Django web framework for Python
+Hibernate: A popular ORM framework for Java applications
+Entity Framework: A Microsoft ORM framework for .NET applications
+SQLAlchemy: A Python SQL toolkit and ORM that provides a full suite of database tools for working with relational databases
+Active Record (Rails): Although not strictly an ORM library, Rails' Active Record pattern provides ORM-like functionality for Ruby on Rails applications. 
