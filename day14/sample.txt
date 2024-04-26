@@ -1,0 +1,12 @@
+1.   Study the API Unit Testing Example that we disucssed in the session (Refer the example uploaded in drive).
+
+2.  Study the details from the website, check their source code as well.
+		a.  https://www.digitalocean.com/community/tutorials/test-a-node-restful-api-with-mocha-and-chai	
+		b.   https://github.com/samuxyz/bookstore
+		
+3.  Create required no. of APIs for your allocated project case study. 
+IMPLEMENTED IN PROJECT
+
+
+4.  Write unit test cases for your project case study APIs 
+IMPLEMENTED IN PROJECT
