@@ -1,0 +1,76 @@
+1. What is MVC?
+MVC stands for Model-View-Controller, which is a software architectural pattern commonly used for designing web applications. 
+Model:
+The Model represents the data and business logic of the application. It typically interacts with the database or any other data source to perform CRUD (Create, Read, Update, Delete) operations.
+In a Node.js and Express application, the model layer might consist of JavaScript classes, modules, or ORM (Object-Relational Mapping) libraries like Sequelize or Mongoose to define and interact with database schemas.
+View:
+The View is responsible for presenting the data to the user and handling user interactions. It's what the user sees and interacts with.
+In a Node.js and Express application, the view layer often consists of HTML templates (using template engines like EJS, Pug, Handlebars, etc.) along with CSS and client-side JavaScript files.
+Controller:
+The Controller acts as an intermediary between the Model and the View. It handles user requests, processes the input, interacts with the Model to fetch or update data, and then passes the data to the View for presentation.
+In a Node.js and Express application, controllers are JavaScript modules or classes that define functions to handle various HTTP requests (e.g., GET, POST, PUT, DELETE) for different routes. These functions interact with the Model to perform database operations and then render the appropriate View with the retrieved data.
+
+
+2. How to implement MVC in Express JS?
+Model:
+Define your data models in the models directory. These models represent the structure of your data and typically interact with the database.
+You can use libraries like Mongoose (for MongoDB) or Sequelize (for SQL databases) to define and interact with your models.
+View:
+Create your views using a templating engine such as EJS, Pug (formerly Jade), Handlebars, etc. These views are stored in the views directory.
+Views should focus on the presentation logic and rendering HTML pages based on data provided by the controller.
+Controller:
+Define your route handlers and business logic in the controllers directory. Each controller should handle specific routes and interact with the models to retrieve or manipulate data.
+Controllers should be responsible for processing incoming requests, calling the appropriate model functions, and rendering the appropriate view.
+Routes:
+Define your application routes in separate files within the routes directory. Each route file should be responsible for a specific set of routes.
+Route files should import controllers and define route handlers using Express's routing methods (router.get, router.post, etc.).
+Integration:
+Import required modules (models, views, controllers) in your route files and use them to handle incoming requests.
+Use Express middleware to parse request bodies, handle sessions, and serve static files if needed.
+Initialize your Express application in the app.js file, define middleware, and configure routes.
+
+
+3. Why do we need view engines in MVC?
+View engines are an integral part of the MVC (Model-View-Controller) architecture in web development, serving several essential purposes:
+Dynamic Content Generation: View engines allow developers to generate dynamic HTML content by embedding server-side code within HTML templates. This enables the presentation layer (View) to interact with the application's data (Model) and respond to user input or changes in the application state.
+Template Reusability: View engines promote code reusability by allowing developers to create reusable template files for common elements across multiple pages. For example, you can define a header, footer, or navigation menu once and include it in multiple views without duplicating code.
+Separation of Concerns: View engines facilitate the separation of concerns by separating the presentation logic from the application's business logic and data manipulation. This separation enhances code readability, maintainability, and scalability by organizing the codebase into distinct layers (Model, View, Controller).
+Client-Server Communication: View engines facilitate communication between the client (browser) and the server by dynamically rendering HTML content based on data received from the server. This enables the server to respond to client requests with dynamically generated web pages tailored to the user's needs or preferences.
+Support for Layouts and Partials: View engines often provide features for defining layouts and partials, allowing developers to create consistent page layouts and reusable components. Layouts define the overall structure of a web page (e.g., header, footer, main content area), while partials are smaller components that can be included within multiple views.
+Integration with Frontend Frameworks: View engines can integrate with frontend frameworks and libraries, such as React, Vue.js, or Angular, to build single-page applications (SPAs) or progressive web apps (PWAs). In such cases, the view engine is responsible for rendering the initial HTML markup, while the frontend framework handles client-side routing, state management, and interactive components.
+
+
+4. What are the examples of view engines?
+EJS (Embedded JavaScript):
+EJS is a simple and easy-to-use view engine that allows embedding JavaScript code within HTML templates.
+It supports features like template inheritance, partials, and custom tags.
+Example: <h1><%= title %></h1> where title is a variable passed from the server-side code.
+Pug (formerly Jade):
+Pug is a template engine with a concise and indentation-based syntax, which compiles to HTML.
+It emphasizes readability and reduces the amount of typing required to create templates.
+Example:
+html
+  head
+    title= pageTitle
+  body
+    h1= title
+Handlebars:
+Handlebars provides a semantic and logic-less templating syntax that compiles to JavaScript functions.
+It supports template inheritance, partials, helpers, and block expressions.
+Example: <h1>{{title}}</h1> where title is a variable passed from the server-side code. 
+
+
+5. What is process object in Node JS?
+In Node.js, the process object is a global object provided by the runtime environment. It provides information and control over the current Node.js process, as well as the operating system environment in which the process is running. The process object is an instance of the EventEmitter class, which means it can emit events and has methods to add and remove listeners for these events.
+
+
+process.argv: An array containing the command-line arguments passed to the Node.js process. The first element (process.argv[0]) is the path to the Node.js executable, the second element (process.argv[1]) is the path to the JavaScript file being executed, and the subsequent elements are the command-line arguments.
+process.env: An object containing the environment variables of the process
+process.cwd(): A method that returns the current working directory of the process.
+process.exit([code]): A method that terminates the Node.js process with an optional exit code. If no exit code is provided, the default exit code is 0 (indicating success).
+process.on(event, listener): A method to register event listeners for various process-related events, such as 'exit', 'uncaughtException', 'SIGINT', 'SIGTERM', etc.
+process.platform: A string indicating the platform on which the Node.js process is running (e.g., 'win32', 'linux', 'darwin').
+process.pid: A number representing the process ID (PID) of the Node.js process.
+process.memoryUsage(): A method that returns an object containing information about memory usage by the Node.js process, including rss, heapTotal, heapUsed, external, etc.
+process.uptime(): A method that returns the number of seconds the Node.js process has been running.
+process.nextTick(callback[, ...args]): A method that schedules a callback function to be invoked in the next iteration of the event loop.

@@ -1,0 +1,8 @@
+1.  How to display images in views? 
+ <img src="<%= url %>" alt="Image">
+2.  Study the dept example that we discussed in the session?
+3.  Create another example with employee details using MVC approach.
+
+4.  Implement Delete operations in the employee example.
+
+5.  Prepare for today's assessment 
