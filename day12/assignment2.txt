@@ -1,0 +1,9 @@
+
+How to skip testcases?
+Skipping test cases can be a tricky decision, as it might hide potential issues in your code. However, there are scenarios where skipping tests temporarily can be justified, such as when a certain feature is still in development or when a test is failing due to external factors beyond your control. 
+JavaScript (using Mocha):
+describe('My tests', function() {
+    it.skip('should do something', function() {
+        // Test code here
+    });
+});
