@@ -1,0 +1,70 @@
+
+Module hotelowner_detail_service 
+
+// get all hotelowner
+// 1->admin dashborad ->hotel/owners subsection
+// get hotelowner by id
+// 1-> hotelowner dashboard -> owner profile
+// add new hotelowner
+// 1-> hotelowner signup
+// update hotel owner
+// 1-> hotelowner dashboard ->owner wants to update owner_detail
+// delete hotelowner by id
+// 1-> admin dashboard -> admin want to delete hotelowner
+
+//******************************************************
+Module user_detail_service
+
+// update existing user by id
+// 1-> user dashboard -> user wants to update user_detail
+// delete user by id
+// 1->admin dashboard -> admin wants to delete user
+// add new user
+// 1->user signup
+// get user by id
+// 1->user dashboard -> user profile
+// get all users
+// 1->admin dashborad ->user section
+
+//*******************************************************
+Module hotel_detail/hotel_amenity (ONGOING)
+
+// add new hotel_detail
+// 1-> hotelownerdashboard addnew hotel (ifnotexist)->hotelowner adds new hotel
+// update exsiting hotel_detail by id
+// 1-> hotelownerdashboard update hotel detail (ifexist)->hotelowner updates existing hotel
+// get hotel by hotel_owner id
+// 1-> hotelowner dashboard hotel detail-> display hotel detail
+
+//***********************************
+Module room_detail
+
+// get room by room id
+// get all room by hotel id
+// add new room_detail
+// 1-> hotelownerdashboard addnew room ->hotelowner adds new room
+// delete room_detail by id
+// 1->hotelownerdashboard delete room-> hotelowner deletes existing room by id
+// update exiting room_detail by id
+// 1->hotelownerdashboard update room->  hotelowner updates room by id
+
+
+//***********************************************
+Module review_detail
+
+// list all reviews of user
+// user dashboard -> reviews for all hotel
+//list all review based on hotel
+// home -> individual hotel page
+// create review with booking id
+// user dashboard ->bookings  ->creates review for any booking
+
+//**********************************************
+Module admin_detail
+
+// update admin detail
+// 1->admin dashboard -> admin wants to update admin table
+// get admin by id
+// 1->admin dashboard -> admin profile
+
+
