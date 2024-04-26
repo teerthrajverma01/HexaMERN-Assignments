@@ -1,0 +1,44 @@
+1. What is API in Web Application? 
+An API, or application programming interface, is a set of rules or protocols that enables software applications to communicate with each other to exchange data, features and functionality.
+In web development, APIs are commonly used to enable interaction between different components of a web application, such as the front-end user interface and the back-end server. They allow developers to create modular and scalable applications by abstracting the underlying functionality and exposing it in a standardized way.
+
+2. What is the role of web server in Web application?
+A web server is an application that runs on a back-end server, which manages all browser HTTP traffic on the client side, forwards it to the requested pages, and ultimately responds to the client-side browser.
+Web servers usually run on TCP port 80 or 443 and are responsible for connecting end-users to various parts of the web application, as well as handling various responses.
+A common web server accepts HTTP requests from the client side and responds with different HTTP response codes and responses
+apache, nginx
+
+3. What are the http verbs? 
+HTTP (Hypertext Transfer Protocol) defines several methods, often referred to as HTTP verbs, that indicate the desired action to be performed on a resource. These methods are used in client-server communication to specify the operation to be carried out on the requested resource. Some common HTTP verbs include:
+GET: The GET method requests a representation of the specified resource. It retrieves data from the server without causing any side effects on the server's state. GET requests are typically used for fetching data like web pages, images, or documents.
+POST: The POST method is used to submit data to the server to create a new resource. It can be used to send data like form submissions, file uploads, or API requests that result in a change in the server's state.
+PUT: The PUT method is used to update or replace the entire resource at the specified URL with the data provided in the request payload. It replaces the existing resource or creates a new one if it doesn't exist.
+PATCH: The PATCH method is used to apply partial modifications to a resource. Unlike PUT, which replaces the entire resource, PATCH only updates the specified fields of the resource.
+DELETE: The DELETE method is used to delete the specified resource from the server. It removes the resource identified by the URL from the server's storage.
+HEAD: The HEAD method is similar to GET, but it only retrieves the headers of the response without the response body. It's often used to retrieve metadata about a resource, like its content type or last modified date, without transferring the entire content.
+OPTIONS: The OPTIONS method is used to retrieve the communication options available for the target resource. It's commonly used to determine the supported methods, headers, or other capabilities of a server.
+
+4. Which http verbs are using in Web API?
+In Web APIs, which are interfaces that allow different software applications to communicate with each other over the internet using HTTP, various HTTP verbs are commonly used to perform different operations on resources.
+GET, POST, PUT, PATCH, DELETE 
+
+5. What are the http status codes?  Study on 4XX and 5XX status codes?
+HTTP status codes are three-digit numbers that indicate the outcome of an HTTP request. 
+1xx: Informational - Request received, continuing process.
+2xx: Success - The action was successfully received, understood, and accepted.
+3xx: Redirection - Further action needs to be taken to complete the request.
+4xx: Client Error - The request contains bad syntax or cannot be fulfilled.
+5xx: Server Error - The server failed to fulfill an apparently valid request.
+
+4xx Status Codes (Client Error):
+400 Bad Request: The server cannot process the request due to a client error, such as malformed syntax or invalid parameters in the request.
+401 Unauthorized: The request requires user authentication. 
+403 Forbidden: The server understood the request, but it refuses to authorize access to the requested resource. 
+404 Not Found: The server cannot find the requested resource. 
+405 Method Not Allowed: The HTTP method used in the request is not supported for the requested resource.
+
+5xx Status Codes (Server Error):
+500 Internal Server Error: A generic error message indicating that something unexpected went wrong on the server while processing the request.
+501 Not Implemented: The server does not support the functionality required to fulfill the request.
+502 Bad Gateway: The server, while acting as a gateway or proxy, received an invalid response from an upstream server it accessed in attempting to fulfill the request.
+503 Service Unavailable: The server is currently unable to handle the request due to temporary overloading or maintenance of the server. 

@@ -1,0 +1,4 @@
+1.Study the questions that given morning once again?
+2.Cross check the example that I shared?
+3.Install postman tool and check the api methods?
+4. Create an example with all crud operations : (Just simple messagae, no database), and test with postman?
