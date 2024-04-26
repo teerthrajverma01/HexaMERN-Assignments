@@ -1,0 +1,48 @@
+What are SOLID Principles in software development?
+SOLID is an acronym that stands for:
+Single Responsibility Principle (SRP)
+    This principle states that a class should have only one reason to change. In other words, a class should have only one responsibility or job. By keeping classes focused on a single task, changes to one part of the system are less likely to affect other parts, leading to more modular and maintainable code.
+Open-Closed Principle (OCP)
+    The Open/Closed Principle states that software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means that the behavior of a module should be extendable without modifying its source code. Instead of changing existing code, new functionality should be added through extension points or interfaces, allowing for easier maintenance and updates.
+Liskov Substitution Principle (LSP)
+    The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
+Interface Segregation Principle (ISP)
+    The Interface Segregation Principle states that clients should not be forced to depend on interfaces they don't use. Instead of one large interface, many small interfaces should be preferred, each serving one specific submodule or client. This principle helps in keeping interfaces focused and prevents clients from being burdened with unnecessary dependencies.
+Dependency Inversion Principle (DIP)
+     The Dependency Inversion Principle states that high-level modules should not depend on low-level modules. Instead, both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions. By decoupling high-level modules from low-level implementations, this principle promotes loose coupling, which makes systems easier to understand, maintain, and extend.
+
+
+Why do we use design patterns? Benefits ?
+Design patterns are widely used in software development for several reasons, each offering specific benefits:
+    Proven Solutions
+    Scalability
+    Abstraction
+    Maintainability
+    Common Vocabulary
+    Performance 
+
+
+What are the types of design patterns?
+Creational Patterns: Creational patterns are concerned with object creation mechanisms, trying to create objects in a manner suitable to the situation. They help in abstracting the process of object creation, making a system independent of how its objects are created, composed, and represented. Common creational patterns include:
+    Singleton Pattern
+    Factory Method Pattern
+    Abstract Factory Pattern
+    Builder Pattern
+    Prototype Pattern
+Structural Patterns: Structural patterns deal with object composition or how classes and objects are composed to form larger structures. They focus on simplifying the structure of a system by identifying simple ways to realize relationships between entities. Common structural patterns include:
+    Adapter Pattern
+    Bridge Pattern
+    Composite Pattern
+    Decorator Pattern
+    Facade Pattern
+    Proxy Pattern
+Behavioral Patterns: Behavioral patterns focus on communication between objects, how objects interact, and how they distribute responsibilities. They describe patterns of communication between classes and objects, which can increase flexibility in carrying out communication. Common behavioral patterns include:
+    Chain of Responsibility Pattern
+    Command Pattern
+    Iterator Pattern
+    Mediator Pattern
+    Observer Pattern
+    State Pattern
+    Strategy Pattern
+    Template Method Pattern
+    Visitor Pattern
