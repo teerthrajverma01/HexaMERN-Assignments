@@ -1,0 +1,12 @@
+1.  Study the examples that i shared on the google drive
+2.  Check more details on the express-validator :
+		a.  https://express-validator.github.io/docs/guides/validation-chain
+		b. https://express-validator.github.io/docs/api/validation-chain
+3.  how to add custom valiations using  custom() method.  Refer the above link.
+4.  Create a API method for Vehicle Registration and perform the following validations:
+		a.  Owner Name  :    Required 
+		b.  Contact Number  :   10 digit number   
+		c.   Vehicle Model :    Required  
+		d.   Registration Number  :    TS09EA1234  (sample format)
+		e.   Vehicle Color  :     Required 
+5.   Check your project case study and find out what kind of validations can we add and write down the details?   (Hint :  No need to implement now, just find the details)
