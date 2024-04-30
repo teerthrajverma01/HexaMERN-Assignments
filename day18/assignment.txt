@@ -1,0 +1,51 @@
+1. What is CORS?
+CORS stands for Cross-Origin Resource Sharing. It's a mechanism that allows web servers to specify which origins are permitted to access the resources on the server. This is a security feature implemented by web browsers to prevent unauthorized access to resources on a different origin/domain.
+
+2. How to use cors middle ware in express?
+npm install cors
+
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+const corsOptions = {
+  origin: 'http://example.com', // Allow only requests from this origin
+  methods: ['GET', 'POST'],      // Allow only GET and POST requests
+  allowedHeaders: ['Content-Type'], // Allow only specific headers
+};
+app.use(cors(corsOptions));// Add CORS middleware to allow all origins
+
+
+3. How to redirect from express application another website?
+ res.redirect('https://example.com');
+
+4. What are the cookies? How to use cookies in express?
+npm install cookie-parser
+
+
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const app = express();
+app.use(cookieParser());// Use cookie-parser middleware
+
+//********set cookie********
+app.get('/set-cookie', (req, res) => {
+  // Set a cookie with name 'username' and value 'john'
+  res.cookie('username', 'john');
+
+  // Optionally, you can also set additional options such as expiry date and secure flag
+  // res.cookie('username', 'john', { maxAge: 900000, httpOnly: true });
+
+  res.send('Cookie has been set');
+});
+//**********get cookie************
+app.get('/get-cookie', (req, res) => {
+  // Retrieve the value of 'username' cookie
+  const username = req.cookies.username;
+
+  if (username) {
+    res.send(`Welcome back, ${username}`);
+  } else {
+    res.send('No username cookie found');
+  }
+});
